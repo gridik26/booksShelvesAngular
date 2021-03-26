@@ -1,7 +1,10 @@
 <div class="row">
     <div class="col-12">
-        <h2>Vos livres</h2>
-        <div class="list-group">
+        <h2 class="mt-3">Vos livres</h2>
+        <div class="row mt-2 d-flex justify-content-end">
+            <button class="btn btn-primary" (click)="onNewBook()">Nouveau livre</button>
+        </div>
+        <div class="list-group mt-3">
             <button class="row list-group-item btn" *ngFor="let book of books; let i = index" (click)="onViewBook(i)">
                 <div class="col">
                     <h3 class="list-group-item-heading d-flex justify-content-start">{{ book.title }}</h3>
@@ -11,9 +14,6 @@
                     <button class="btn btn-secondary d-flex align-items-center " (click)="onDeleteBook(book)">-</button>
                 </div>
             </button>
-        </div>
-        <div class="row mt-2">
-            <button class="btn btn-primary" (click)="onNewBook()">Nouveau livre</button>
         </div>
     </div>
 </div>

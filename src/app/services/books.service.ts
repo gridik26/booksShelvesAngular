@@ -33,7 +33,7 @@ export class BooksService {
   getSingleBook(id: number) {
     return new Promise(
       (resolve, reject) => {
-        firebase.database().ref('/books/'+id).once('value').then(
+        firebase.database().ref('/books/' + id ).once('value').then(
           (data) => {
             resolve(data.val());
           },  (error) => {

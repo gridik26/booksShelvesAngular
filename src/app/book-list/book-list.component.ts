@@ -27,7 +27,7 @@ export class BookListComponent implements OnInit, OnDestroy {
   }
 
   onNewBook() {
-    this.router.navigate(['/books', 'new']);
+    this.router.navigate(['books', 'new']);
   }
 
   onDeleteBook(book: Book) {
@@ -35,7 +35,7 @@ export class BookListComponent implements OnInit, OnDestroy {
   }
 
   onViewBook(id: number) {
-    this.router.navigate(['/books', 'view', id]);
+    this.router.navigate(['books', 'view', id ]);
   }
 
   ngOnDestroy() {
